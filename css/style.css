@@ -1,0 +1,558 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body,
+html {
+  height: 100%;
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
+}
+
+/* Стилі для шапки сайту */
+.header {
+  background-color: #1c1f22;
+  color: #fff;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  width: 100%;
+  z-index: 9999;
+}
+
+.menu-item {
+  margin-right: 20px;
+  text-decoration: none;
+  color: #fff;
+  transition: all 0.3s;
+  position: relative;
+}
+
+.menu-item::before {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: transparent;
+  /* Початковий колір лінії */
+  transition: background-color 0.3s;
+  /* Плавний перехід для кольору */
+}
+
+.menu-item:hover {
+  font-size: 17px;
+  padding: 1px;
+  font-weight: bold;
+  /* Зробимо текст жирним при наведенні */
+}
+
+.menu-item:hover::before {
+  background-color: #fff;
+  /* Колір лінії при наведенні */
+}
+
+.menu .active {
+  font-size: 17px;
+  padding: 1px;
+  font-weight: bold;
+  /* Зробимо текст жирним при наведенні */
+  color: #fff;
+}
+
+.active::before {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #fff;
+  /* Початковий колір лінії */
+  transition: background-color 0.3s;
+  /* Плавний перехід для кольору */
+}
+
+
+/* Стилі для фото на всю сторінку */
+.background-image {
+  background-image: url("/images/home2.png");
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* Стилі для блока з заволоком, підзаволоком і кнопкою */
+.content {
+  text-align: left;
+  width: 30%;
+  display: flex;
+  /* align-items: center; */
+  flex-direction: column;
+  color: #fff;
+  padding: 20px;
+  position: absolute;
+  top: 60%;
+  left: 25%;
+  transform: translate(-50%, -50%);
+}
+
+.content p {
+  margin-bottom: 20px;
+  margin-top: 10px;
+}
+
+/* Стилі для кнопки */
+.button {
+  /* background-color: #4caf50; */
+  color: white;
+  width: 60%;
+  text-align: center;
+  padding: 10px 20px;
+  border: 1px solid white;
+  transition: 0.5s ease;
+  text-decoration: none;
+}
+
+.button:hover {
+  color: black;
+  background-color: #fff;
+}
+
+.boss {
+  background: #2c2f33;
+  color: #fff;
+}
+
+.title {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 60px;
+}
+
+.title h1 {
+  font-size: 34px;
+  font-weight: 800;
+  margin: 20px;
+  letter-spacing: 3.4px;
+}
+
+.title h2 {
+  font-size: 20px;
+  font-weight: 500;
+  width: 55vw;
+  margin-bottom: 10px;
+  letter-spacing: 0.9px;
+}
+
+/* Стилі для контейнера блоків */
+.container {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  height: 100%;
+  width: 80%;
+}
+
+/* Стилі для кожного блоку */
+.block {
+  padding: 20px;
+  text-align: center;
+  flex-basis: 48%;
+  /* Розділити контейнер приблизно на 48% ширини кожного блоку */
+}
+
+.block h2 {
+  text-transform: uppercase;
+}
+
+.block h3 {
+  font-weight: 400;
+  font-size: 16px;
+}
+
+.block p {
+  letter-spacing: 0.6px;
+  line-height: 22px;
+}
+
+/* Стилі для фото */
+.image {
+  width: 100%;
+}
+
+/* Стилі для парних елементів */
+.even {
+  text-align: left;
+}
+
+.even h2,
+p {
+  margin-bottom: 3%;
+}
+
+/* Стилі для непарних елементів */
+.odd {
+  text-align: right;
+}
+
+.odd h3 {
+  margin-top: 3%;
+}
+
+.odd h2,
+p {
+  margin-bottom: 3%;
+}
+
+/* Стилі для таблиці */
+table {
+  border-collapse: collapse;
+  width: 90%;
+  margin: 20px auto;
+}
+
+.content-table {
+  height: 100%;
+}
+
+/* Стилі для заголовку таблиці */
+th {
+  background-color: #b1b1b1;
+}
+
+th,
+td {
+  border: 1px solid #ddd;
+  text-align: left;
+  padding: 8px;
+}
+
+.row-gray {
+  background-color: #f2f2f2;
+}
+
+.number-row {
+  font-weight: bold;
+}
+
+.number-column,
+.year-column {
+  width: 10%;
+}
+
+.name-column {
+  width: 25%;
+}
+
+.content-bio {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.content-video {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 70vh;
+  margin-bottom: 2%;
+}
+
+.content-audio {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.content-audio h3 {
+  margin: 2% 0;
+}
+
+.content-text {
+  width: 70%;
+  margin: 0 auto;
+}
+
+.info {
+  position: relative;
+  margin: 5% 0;
+}
+
+.info-odd {
+  text-align: right;
+}
+
+.info-even::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -1%;
+  width: 20%;
+  height: 3px;
+  background-color: #000;
+  /* Колір лінії */
+  margin: -10px;
+}
+
+.info-even::after {
+  content: "";
+  position: absolute;
+  top: -10%;
+  left: 0;
+  width: 3px;
+  height: 60%;
+  background-color: #000;
+  /* Колір лінії */
+  margin: -10px;
+}
+
+.info-odd::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: -1%;
+  width: 20%;
+  height: 3px;
+  background-color: #000;
+  margin: -10px;
+}
+
+.info-odd::after {
+  content: "";
+  position: absolute;
+  top: -10%;
+  right: 0;
+  width: 3px;
+  height: 60%;
+  background-color: #000;
+  /* Колір лінії */
+  margin: -10px;
+}
+
+.info-title {
+  margin-bottom: 10px;
+}
+
+
+.footer {
+  height: 5vh;
+}
+
+
+@media screen and (max-width: 1366px) {
+  .content-text {
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .content-text {
+    width: 100%;
+  }
+
+  .container {
+    width: 100%;
+  }
+
+  .block {
+    flex-basis: 100%;
+  }
+
+  .title h2 {
+    width: 95vw;
+  }
+
+  .content {
+    width: 50%;
+  }
+
+  .button {
+    width: 70%;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .container {
+    flex-direction: column;
+    /* Розміщення блоків в стовпці на малих екранах */
+    width: 100%;
+  }
+
+  .block {
+    flex-basis: 100%;
+    /* Блоки на повну ширину екрану на малих екранах */
+    text-align: center;
+  }
+
+  .block h3,
+  h2,
+  p {
+    text-align: justify;
+  }
+
+  .title h2 {
+    text-align: center;
+    width: 90vw;
+  }
+
+  table.horizontal-table {
+    display: block;
+    width: auto;
+  }
+
+  table.horizontal-table th,
+  table.horizontal-table td {
+    display: block;
+    width: 100%;
+    text-align: left;
+  }
+
+  .info-odd>.info-title {
+    text-align: right;
+  }
+
+
+  .info-even::after,
+  .info-odd::after {
+    top: -3%;
+    height: 45%;
+  }
+}
+
+@media screen and (min-width: 480px) and (max-width: 767px) {
+  .menu {
+    margin: 0 auto;
+  }
+
+  .content {
+    width: 85%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: #fff;
+    /* Колір тексту */
+    padding: 20px;
+    text-align: center;
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .background-image {
+    background-image: url("/images/home458.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+  }
+
+  .info {
+    margin-top: 30px;
+  }
+}
+
+@media screen and (min-width: 480px) {
+  .content-bio {
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .header-logo {
+    display: none;
+    padding: 0;
+  }
+
+  .menu {
+    margin: 0 auto;
+  }
+
+  .menu-item {
+    margin-right: 5px;
+    font-size: 14px;
+  }
+
+  .content {
+    width: 95%;
+    display: flex;
+    padding: 20px;
+    text-align: center;
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .title h1 {
+    font-size: 25px;
+    margin: 20px 0;
+  }
+
+  .title h2 {
+    font-size: 16px;
+  }
+
+  .background-image {
+    background-image: url("/images/home458.png");
+    max-width: 100%;
+    height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .button {
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  .content-bio {
+    width: 90%;
+  }
+
+  .content-video {
+    height: 60vh;
+  }
+
+  .content-text {
+    width: 95%;
+  }
+
+  .info {
+    margin-top: 30px;
+  }
+
+  .info-odd .info-title {
+    text-align: right;
+  }
+
+  .info-even::after {
+    top: -3%;
+    height: 45%;
+  }
+
+  .info::after {
+    top: -2%;
+    width: 3px;
+    height: 20%;
+  }
+
+  .info::before {
+    width: 25%;
+  }
+}
